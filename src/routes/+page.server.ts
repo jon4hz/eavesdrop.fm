@@ -44,29 +44,5 @@ export const POST: PageServerLoad = async ({ request }) => {
 		return { status: 200 };
 	}
 
-	const plausiblePayload = {
-		name: 'listen',
-		url: 'https://eavesdrop.fm/listen',
-		domain: 'eavesdrop.fm'
-	};
-
-	try {
-		await fetch(`https://plausible.io/api/event`, {
-			method: 'POST',
-			headers: {
-				'user-agent': request.headers.get('user-agent')?.toString() + body.Player.uuid,
-				'X-Forwarded-For': body.Player.publicAddress ?? '0.0.0.0',
-				'Content-Type': 'application/json'
-			},
-			body: JSON.stringify(plausiblePayload)
-		})
-			.then(statusCheck)
-			.catch((e) => {
-				throw new Error(e);
-			});
-	} catch (e) {
-		return { status: 200 };
-	}
-
 	return { status: 200 };
 };

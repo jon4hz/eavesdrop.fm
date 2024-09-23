@@ -5,7 +5,6 @@
 <nav>
 	<a class:active={$page.url.pathname === '/about'} href="/about">About</a>
 	<a class:active={$page.url.pathname === '/faq'} href="/faq">FAQ</a>
-	<a class:active={$page.url.pathname === '/stats'} href="/stats">Stats</a>
 </nav>
 
 <style lang="scss">

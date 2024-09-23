@@ -82,11 +82,6 @@
 			ListenBrainz token are encrypted in transit, and not retained by us.
 		</p>
 		<p>
-			We collect minimal, anonymous statistics to keep track of hosting costs and associated
-			bandwidth limitations. You can see what we're capturing
-			<a href="/stats">here</a>.
-		</p>
-		<p>
 			Should you have concerns, the source code is open and auditable
 			<a href="https://github.com/simonxciv/eavesdrop.fm">here</a>.
 		</p>
